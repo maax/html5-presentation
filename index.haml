@@ -1,0 +1,299 @@
+<!doctype html>
+%html
+  %head
+    %meta{:charset => "UTF-8"}
+    %meta{:content => "width=1200", :name => "viewport"}
+    %title HTML5
+    %link{:href => "css/base.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/desert.css", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "javascripts/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/fathom.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/prettify.js", :type => "text/javascript"}
+    %script{:src => "javascripts/application.js", :type => "text/javascript"}
+
+    :javascript
+      $(document).ready(function(){
+        $('#presentation').fathom({
+          displayMode: 'multi',
+          margin: 500
+        });
+      });
+
+
+    %body
+      // Force UTF-8 encoding by adding a unicode character. ♫
+      #presentation
+
+        .slide
+          %h1{:style => "text-align: center"}
+            HTML5
+          %p{:style => "text-align: center"}
+            %img{:src => "images/html5logo.png"}
+            %br
+            %br
+            %span{:style => "margin-left: 45px"}
+              Maximilian Walker
+
+        .slide
+          %h2 HTML
+          %section
+            %p HTML (<em>HyperText Markup Language</em>) is the core language of the <em>Web</em>.
+            %br
+            %ul
+              %li describes the semantic structure of documents
+              %li interpreted and displayed by <em>web browsers</em>
+              %li <em>open standard</em> in ongoing development
+              %li
+                newer versions also contain <em>JavaScript API's</em>, <em>network protocols</em> and
+                %br
+                Cascading Style Sheets (<em>CSS</em>)
+            .slide-number 1
+
+        .slide
+          %h2 History
+          %section
+            %table#timeline
+              %tr#timeline-specs
+                %td HTML
+                %td HTML 3
+                %td HTML 4
+                %td XHTML
+                %td
+                %td
+                  %img{:src => "images/skull.png"}
+                %td
+                %td HTML 5
+              %tr#timeline-bar
+                %td
+                %td
+                %td
+                %td
+                %td.fight
+                %td.fight
+                %td.fight
+                %td
+              %tr#timeline-numbers
+                %td 1992
+                %td 1995
+                %td 1997
+                %td 2000
+                %td
+                %td
+                %td
+                %td 2007
+          %br
+          %section
+            %table#w3c-whatwg
+              %tr.caption
+                %td W3C
+                %td WHATWG
+              %tr.description
+                %td World Wide Web Consortium (<span class="year">1994</span>)
+                %td Web Hypertext Application Technology Working Group (<span class="year">2004</span>)
+              %tr
+                %td
+                  %ul
+                    %li Universities
+                    %li Research Facilities
+                    %li Business Companies
+                %td
+                  %ul
+                    %li Mozilla Foundation
+                    %li Opera Software
+                    %li Apple Inc.
+            .slide-number 2
+
+        .slide
+          %h2 Semantics
+          %section
+            %p
+              All HTML elements are defined to have a particular <em>meaning</em> (semantics).
+            %br
+            %ol.code-example
+              %li &lt;ol&gt;
+              %li &lt;input type=&quot;search&quot;&gt;
+          %br
+          %section
+            %p
+              For some content there were no meaningful HTML elements
+              → „<em>Divitis</em>“
+            %ol.code-example
+              %li &lt;div id="header"&gt;
+              %li &lt;div class="navigation"&gt;
+              %li &lt;div class="content"&gt;
+              %li &lt;div id="footer"&gt;
+              %li &lt;div …
+            .slide-number 3
+
+        .slide
+          %h2 Semantics
+          %section
+            %p
+              <em>New elements</em>
+            %br
+            %ol.code-example
+              %li &lt;nav&gt;
+              %li &lt;article&gt;
+              %li &lt;header&gt;
+              %li &lt;footer&gt;
+          %br
+          %section
+            %p
+              <em>Obsolete elements</em>
+            %br
+            %ol.code-example
+              %li &lt;font&gt;
+              %li &lt;center&gt;
+            .slide-number 4
+
+
+        .slide
+          %h2 Semantics
+          %section
+            %p
+              Who cares?
+            %br
+            %ol
+              %li <em> Visually impaired </em>
+              %li <em> Search engines </em>
+            .slide-number 5
+
+        .slide
+          %h2 Communication
+          %section
+            %p Today many of our actions in the Web involve some form of <em>communication</em> with others.
+            %br
+            %ul
+              %li Social networks
+              %li Collaborative working
+              %li Games
+          %br
+          %section
+            <em>Requirements</em> on data distribution:
+            %br
+            %br
+            %table#requirements.inverted
+              %tr
+                %td
+                  many clients
+                  %br
+                  at the same time
+                %td
+                  fast
+                  %br
+                  (preferably real-time)
+                %td
+                  data efficient
+            .slide-number{:style => "margin-top: 10px"} 6
+
+        .slide
+          %h2 Communication
+          %section
+            %h3 <em>HTTP (Polling)</em>
+            %br
+            %ul
+              %li
+                %i half-duplex
+              %li
+                client continually sends HTTP requests to the server to ask for new data
+              %li
+                server sends HTTP response with message (or command to terminate the request)
+          %br
+          %section
+            %ol.minus-list
+              %li
+                many connections have to be handled for each client
+              %li
+                each HTTP header contains redundant data
+            .slide-number 7
+
+        .slide
+          %h2 Communication
+          %section
+            %h3 <em>Web Sockets Protocol (Push)</em>
+            %br
+            %ul
+              %li
+                %i full-duplex
+              %li
+                once a Web Socket connection has been established client and server can <i>push</i> data to each other
+          %br
+          %section
+            %ol.plus-list
+              %li one connection per client
+              %li no data overhead
+            .slide-number 8
+
+        .slide
+          %h2 Communication
+          %section
+            %p
+              <em>Demo</em>
+              %span{:style => "font-size: 36px; margin-left: 30px"}
+                %span{:style => "color: #ccc"}
+                  http://
+                is.gd/websocket
+            .slide-number 9
+          %pre.prettyprint
+            :preserve
+              var ws = new WebSocket('ws://html5presentation.herokuapp.com/channel');
+              sendmsg = function(message) {
+                ws.send(message);
+              };
+              ws.onmessage = function (message) {
+                $('#output').prepend(message.text);
+              };
+          %br
+          %ol#output
+            %li Hello there!
+
+        .slide
+          %h2 Offline Storage
+          %section
+            %p
+              More and more web clients are steadily connected to the Internet.
+              %br
+              <em>So why do we need Offline functionality?</em>
+          %br
+          %section
+            %img{:src => "images/mobileusage.png", :style => "width: 80%"}
+            %br
+            .slide-number{:style => "margin-left: 10px; line-height: 42px;"} 10
+            %p.source
+              Global Mobile Data Traffic Forecast,
+              Source: Cisco VNI Mobile, 2012
+
+        .slide
+          %h2 Offline Storage
+          %section
+            %p
+              1. Mobile internet connections are frequently interrupted.
+              %br
+              2. Users visit web pages regulary.
+            %br
+            %br
+            <b>Locally stored data</b>
+            %br
+            %br
+            %ol
+              %li → &nbsp; allows <em>offline interaction</em>
+              %li → &nbsp; serves as a cache and results in <em>faster start-up and display times</em>
+            .slide-number 11
+
+        .slide
+          %h2 Web Storage
+          %section
+            %p
+              The <b>Web Storage</b> specification defines an interface for storing <em>key-value</em> data pairs in the <em>web client</em>.
+            .slide-number 12
+          %br
+          %section
+            %p
+              <em>Demo</em> &nbsp; &nbsp; localStorage
+          %pre.prettyprint
+            :preserve
+              // Save content in localStorage
+              window.localStorage.setItem('value', html_element.value);
+
+              // Get content from previous edit from localStorage
+              window.localStorage.getItem('value');

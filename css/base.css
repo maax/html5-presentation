@@ -1,0 +1,373 @@
+/* line 17, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "LeagueGothicRegular";
+  src: url("../fonts/League_Gothic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src: url("../fonts/Lato-Reg-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DroidSansRegular";
+  src: url("../fonts/DroidSans-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DroidSansBold";
+  src: url("../fonts/DroidSans-Bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 43, ../sass/base.sass */
+body {
+  background-color: #f0f0f0;
+  font-family: "LatoRegular", Times;
+  font-size: 26px;
+  color: #535353;
+}
+
+/* line 49, ../sass/base.sass */
+h1 {
+  margin-bottom: 20px;
+  color: #535353;
+  font-family: "LeagueGothicRegular";
+  font-size: 120px;
+  text-shadow: white 3px 3px 1px;
+}
+
+/* line 56, ../sass/base.sass */
+h2 {
+  margin-bottom: 20px;
+  margin-left: 30px;
+  color: #e34c26;
+  font-family: "DroidSansRegular";
+  font-size: 56px;
+}
+
+/* line 64, ../sass/base.sass */
+section {
+  padding: 40px;
+  background: white;
+}
+/* line 67, ../sass/base.sass */
+section.horizontal {
+  width: 40%;
+}
+/* line 69, ../sass/base.sass */
+section.left {
+  float: left;
+}
+/* line 71, ../sass/base.sass */
+section.right {
+  float: right;
+}
+/* line 73, ../sass/base.sass */
+section.vertical {
+  height: 40%;
+}
+
+/* line 76, ../sass/base.sass */
+a {
+  color: #0092bf;
+}
+
+/* line 79, ../sass/base.sass */
+p {
+  line-height: 42px;
+}
+
+/* line 82, ../sass/base.sass */
+em {
+  color: #0092bf;
+}
+
+/* line 85, ../sass/base.sass */
+i {
+  font-style: italic;
+}
+
+/* line 88, ../sass/base.sass */
+b {
+  font-weight: bold;
+}
+
+/* line 91, ../sass/base.sass */
+u {
+  text-decoration: underline;
+}
+
+/* line 94, ../sass/base.sass */
+ul, ol {
+  padding-left: 25px;
+  line-height: 32px;
+}
+/* line 97, ../sass/base.sass */
+ul li, ol li {
+  padding: 5px 0;
+}
+
+/* line 100, ../sass/base.sass */
+ul {
+  list-style-type: disc;
+}
+
+/* line 103, ../sass/base.sass */
+pre, span.pre {
+  font-family: monospace;
+  font-size: 18px;
+  background-color: #393939;
+  color: white;
+}
+
+/* line 109, ../sass/base.sass */
+pre {
+  padding: 40px;
+  line-height: 24px;
+}
+
+/* line 113, ../sass/base.sass */
+table {
+  width: 100%;
+}
+/* line 115, ../sass/base.sass */
+table th {
+  font-weight: bold;
+}
+/* line 117, ../sass/base.sass */
+table td, table th {
+  padding: 5px 20px;
+}
+
+/* line 120, ../sass/base.sass */
+.slide-number {
+  float: right;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+/* line 125, ../sass/base.sass */
+.inverted {
+  background: #535353;
+  color: white;
+}
+
+/* line 129, ../sass/base.sass */
+.spacious, #requirements td {
+  padding: 30px;
+}
+
+/* line 132, ../sass/base.sass */
+.note {
+  margin: 10px;
+  font-style: italic;
+  color: #b9b9b9;
+}
+
+/* line 137, ../sass/base.sass */
+.source {
+  float: right;
+  font-size: 16px;
+}
+
+/* line 141, ../sass/base.sass */
+.code-example, #html-example {
+  font-family: monospace;
+  font-size: 18px;
+}
+
+/* line 145, ../sass/base.sass */
+.plus-list {
+  list-style-image: url("../images/plus.png");
+  color: #45976f;
+}
+
+/* line 149, ../sass/base.sass */
+.minus-list {
+  list-style-image: url("../images/minus.png");
+  color: #aa4646;
+}
+
+/* line 154, ../sass/base.sass */
+#html-example {
+  width: 920px;
+  padding: 40px;
+  border: none;
+  background-color: #393939;
+  color: white;
+}
+
+/* line 162, ../sass/base.sass */
+#timeline {
+  width: 100%;
+}
+/* line 164, ../sass/base.sass */
+#timeline td {
+  text-align: center;
+}
+
+/* line 167, ../sass/base.sass */
+#timeline-specs {
+  font-weight: bold;
+}
+
+/* line 170, ../sass/base.sass */
+#timeline-bar {
+  height: 2px;
+  background: #0092bf;
+}
+/* line 173, ../sass/base.sass */
+#timeline-bar .fight {
+  background: #8ce4ff;
+}
+
+/* line 176, ../sass/base.sass */
+#timeline-numbers {
+  font-size: 14px;
+}
+
+/* line 179, ../sass/base.sass */
+#w3c-whatwg {
+  width: 100%;
+}
+/* line 181, ../sass/base.sass */
+#w3c-whatwg .caption td {
+  font-size: 30px;
+  color: #59d8ff;
+}
+/* line 184, ../sass/base.sass */
+#w3c-whatwg .description td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+/* line 187, ../sass/base.sass */
+#w3c-whatwg .year {
+  font-weight: bold;
+}
+
+/* line 191, ../sass/base.sass */
+#requirements td {
+  text-align: center;
+}
+/* line 194, ../sass/base.sass */
+#requirements td:not(:last-child) {
+  border-right: 10px solid white;
+}
+
+/* line 197, ../sass/base.sass */
+#output {
+  height: 325px;
+  overflow: hidden;
+  padding: 0;
+  font-style: italic;
+}
+/* line 202, ../sass/base.sass */
+#output li {
+  float: left;
+  padding: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: white;
+}
+/* line 209, ../sass/base.sass */
+#output li:before {
+  content: "„";
+}
+/* line 211, ../sass/base.sass */
+#output li:after {
+  content: "“";
+}
+
+/* line 216, ../sass/base.sass */
+#presentation {
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* line 220, ../sass/base.sass */
+div.slide {
+  position: relative;
+  display: inline-block;
+  width: 1000px;
+  height: 700px;
+  padding: 40px 20px;
+  vertical-align: top;
+}
+
+/* line 228, ../sass/base.sass */
+div.inactiveslide {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}

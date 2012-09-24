@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <meta content='width=1200' name='viewport' />
+    <title>HTML5</title>
+    <link href='css/base.css' rel='stylesheet' type='text/css' />
+    <link href='css/desert.css' rel='stylesheet' type='text/css' />
+    <script src='javascripts/jquery.min.js' type='text/javascript'></script>
+    <script src='javascripts/fathom.min.js' type='text/javascript'></script>
+    <script src='javascripts/prettify.js' type='text/javascript'></script>
+    <script src='javascripts/application.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        $(document).ready(function(){
+          $('#presentation').fathom({
+            displayMode: 'multi',
+            margin: 500
+          });
+        });
+      //]]>
+    </script>
+    <body>
+      <!-- / Force UTF-8 encoding by adding a unicode character. ♫ -->
+      <div id='presentation'>
+        <div class='slide'>
+          <h1 style='text-align: center'>
+            HTML5
+          </h1>
+          <p style='text-align: center'>
+            <img src='images/html5logo.png' />
+            <br />
+            <br />
+            <span style='margin-left: 45px'>
+              Maximilian Walker
+            </span>
+          </p>
+        </div>
+        <div class='slide'>
+          <h2>HTML</h2>
+          <section>
+            <p>HTML (<em>HyperText Markup Language</em>) is the core language of the <em>Web</em>.</p>
+            <br />
+            <ul>
+              <li>describes the semantic structure of documents</li>
+              <li>interpreted and displayed by <em>web browsers</em></li>
+              <li><em>open standard</em> in ongoing development</li>
+              <li>
+                newer versions also contain <em>JavaScript API's</em>, <em>network protocols</em> and
+                <br />
+                Cascading Style Sheets (<em>CSS</em>)
+              </li>
+            </ul>
+            <div class='slide-number'>1</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>History</h2>
+          <section>
+            <table id='timeline'>
+              <tr id='timeline-specs'>
+                <td>HTML</td>
+                <td>HTML 3</td>
+                <td>HTML 4</td>
+                <td>XHTML</td>
+                <td></td>
+                <td>
+                  <img src='images/skull.png' />
+                </td>
+                <td></td>
+                <td>HTML 5</td>
+              </tr>
+              <tr id='timeline-bar'>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class='fight'></td>
+                <td class='fight'></td>
+                <td class='fight'></td>
+                <td></td>
+              </tr>
+              <tr id='timeline-numbers'>
+                <td>1992</td>
+                <td>1995</td>
+                <td>1997</td>
+                <td>2000</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2007</td>
+              </tr>
+            </table>
+          </section>
+          <br />
+          <section>
+            <table id='w3c-whatwg'>
+              <tr class='caption'>
+                <td>W3C</td>
+                <td>WHATWG</td>
+              </tr>
+              <tr class='description'>
+                <td>World Wide Web Consortium (<span class="year">1994</span>)</td>
+                <td>Web Hypertext Application Technology Working Group (<span class="year">2004</span>)</td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Universities</li>
+                    <li>Research Facilities</li>
+                    <li>Business Companies</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Mozilla Foundation</li>
+                    <li>Opera Software</li>
+                    <li>Apple Inc.</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <div class='slide-number'>2</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Semantics</h2>
+          <section>
+            <p>
+              All HTML elements are defined to have a particular <em>meaning</em> (semantics).
+            </p>
+            <br />
+            <ol class='code-example'>
+              <li>&lt;ol&gt;</li>
+              <li>&lt;input type=&quot;search&quot;&gt;</li>
+            </ol>
+          </section>
+          <br />
+          <section>
+            <p>
+              For some content there were no meaningful HTML elements
+              → „<em>Divitis</em>“
+            </p>
+            <ol class='code-example'>
+              <li>&lt;div id="header"&gt;</li>
+              <li>&lt;div class="navigation"&gt;</li>
+              <li>&lt;div class="content"&gt;</li>
+              <li>&lt;div id="footer"&gt;</li>
+              <li>&lt;div …</li>
+            </ol>
+            <div class='slide-number'>3</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Semantics</h2>
+          <section>
+            <p>
+              <em>New elements</em>
+            </p>
+            <br />
+            <ol class='code-example'>
+              <li>&lt;nav&gt;</li>
+              <li>&lt;article&gt;</li>
+              <li>&lt;header&gt;</li>
+              <li>&lt;footer&gt;</li>
+            </ol>
+          </section>
+          <br />
+          <section>
+            <p>
+              <em>Obsolete elements</em>
+            </p>
+            <br />
+            <ol class='code-example'>
+              <li>&lt;font&gt;</li>
+              <li>&lt;center&gt;</li>
+            </ol>
+            <div class='slide-number'>4</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Semantics</h2>
+          <section>
+            <p>
+              Who cares?
+            </p>
+            <br />
+            <ol>
+              <li><em> Visually impaired </em></li>
+              <li><em> Search engines </em></li>
+            </ol>
+            <div class='slide-number'>5</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Communication</h2>
+          <section>
+            <p>Today many of our actions in the Web involve some form of <em>communication</em> with others.</p>
+            <br />
+            <ul>
+              <li>Social networks</li>
+              <li>Collaborative working</li>
+              <li>Games</li>
+            </ul>
+          </section>
+          <br />
+          <section>
+            <em>Requirements</em> on data distribution:
+            <br />
+            <br />
+            <table class='inverted' id='requirements'>
+              <tr>
+                <td>
+                  many clients
+                  <br />
+                  at the same time
+                </td>
+                <td>
+                  fast
+                  <br />
+                  (preferably real-time)
+                </td>
+                <td>
+                  data efficient
+                </td>
+              </tr>
+            </table>
+            <div class='slide-number' style='margin-top: 10px'>6</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Communication</h2>
+          <section>
+            <h3><em>HTTP (Polling)</em></h3>
+            <br />
+            <ul>
+              <li>
+                <i>half-duplex</i>
+              </li>
+              <li>
+                client continually sends HTTP requests to the server to ask for new data
+              </li>
+              <li>
+                server sends HTTP response with message (or command to terminate the request)
+              </li>
+            </ul>
+          </section>
+          <br />
+          <section>
+            <ol class='minus-list'>
+              <li>
+                many connections have to be handled for each client
+              </li>
+              <li>
+                each HTTP header contains redundant data
+              </li>
+            </ol>
+            <div class='slide-number'>7</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Communication</h2>
+          <section>
+            <h3><em>Web Sockets Protocol (Push)</em></h3>
+            <br />
+            <ul>
+              <li>
+                <i>full-duplex</i>
+              </li>
+              <li>
+                once a Web Socket connection has been established client and server can <i>push</i> data to each other
+              </li>
+            </ul>
+          </section>
+          <br />
+          <section>
+            <ol class='plus-list'>
+              <li>one connection per client</li>
+              <li>no data overhead</li>
+            </ol>
+            <div class='slide-number'>8</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Communication</h2>
+          <section>
+            <p>
+              <em>Demo</em>
+              <span style='font-size: 36px; margin-left: 30px'>
+                <span style='color: #ccc'>
+                  http://
+                </span>
+                is.gd/websocket
+              </span>
+            </p>
+            <div class='slide-number'>9</div>
+          </section>
+          <pre class='prettyprint'>var ws = new WebSocket('ws://html5presentation.herokuapp.com/channel');&#x000A;sendmsg = function(message) {&#x000A;  ws.send(message);&#x000A;};&#x000A;ws.onmessage = function (message) {&#x000A;  $('#output').prepend(message.text);&#x000A;};</pre>
+          <br />
+          <ol id='output'>
+            <li>Hello there!</li>
+          </ol>
+        </div>
+        <div class='slide'>
+          <h2>Offline Storage</h2>
+          <section>
+            <p>
+              More and more web clients are steadily connected to the Internet.
+              <br />
+              <em>So why do we need Offline functionality?</em>
+            </p>
+          </section>
+          <br />
+          <section>
+            <img src='images/mobileusage.png' style='width: 80%' />
+            <br />
+            <div class='slide-number' style='margin-left: 10px; line-height: 42px;'>10</div>
+            <p class='source'>
+              Global Mobile Data Traffic Forecast,
+              Source: Cisco VNI Mobile, 2012
+            </p>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Offline Storage</h2>
+          <section>
+            <p>
+              1. Mobile internet connections are frequently interrupted.
+              <br />
+              2. Users visit web pages regulary.
+            </p>
+            <br />
+            <br />
+            <b>Locally stored data</b>
+            <br />
+            <br />
+            <ol>
+              <li>→ &nbsp; allows <em>offline interaction</em></li>
+              <li>→ &nbsp; serves as a cache and results in <em>faster start-up and display times</em></li>
+            </ol>
+            <div class='slide-number'>11</div>
+          </section>
+        </div>
+        <div class='slide'>
+          <h2>Web Storage</h2>
+          <section>
+            <p>
+              The <b>Web Storage</b> specification defines an interface for storing <em>key-value</em> data pairs in the <em>web client</em>.
+            </p>
+            <div class='slide-number'>12</div>
+          </section>
+          <br />
+          <section>
+            <p>
+              <em>Demo</em> &nbsp; &nbsp; localStorage
+            </p>
+          </section>
+          <pre class='prettyprint'>// Save content in localStorage&#x000A;window.localStorage.setItem('value', html_element.value);&#x000A;&#x000A;// Get content from previous edit from localStorage&#x000A;window.localStorage.getItem('value');</pre>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>

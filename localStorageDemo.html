@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <style>
+
+    body {
+      background: #F0F0F0;
+      font-family: helvetica, verdana, arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #E34C26;
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      padding: 40px;
+      font-size: 24px;
+      border: none;
+    }
+
+  </style>
+  </head>
+  <body>
+    <h1>
+      Notes
+    </h1>
+    <div id="content"></div>
+    <p id="log"></p>
+    <script>
+      // Generate the little markup from javascript
+      var area = document.createElement('textarea');
+      area.style.width = '500px';
+      area.style.height = '300px';
+      document.querySelector('#content').appendChild(area);
+
+      // place content from previous edit
+      if (!area.value) {
+        area.value = window.localStorage.getItem('value');
+      }
+
+      // your content will be saved locally
+      area.addEventListener('keyup', function () {
+        window.localStorage.setItem('value', area.value);
+      }, false);
+
+    </script>
+  </body>
+</html>​

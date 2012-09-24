@@ -1,0 +1,231 @@
+@import compass/reset
+@import compass/css3/opacity
+@import compass/css3/text-shadow
+@import compass/css3/border-radius
+@import compass/css3/transform
+
+// Colors
+$sand: #F0F0F0
+$red: #D43204
+$grey: #535353
+$lightgrey: #F0F0F0
+$blue: #0092BF
+$html5-color: #E34C26
+$html5-color-light: #F06529
+
+// Fonts
+@font-face
+  font-family: 'LeagueGothicRegular'
+  src: url('../fonts/League_Gothic-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'LatoRegular'
+  src: url('../fonts/Lato-Reg-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'DroidSansRegular'
+  src: url('../fonts/DroidSans-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'DroidSansBold'
+  src: url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+body
+  background-color: $sand
+  font-family: 'LatoRegular', Times
+  font-size: 26px
+  color: $grey
+
+h1
+  margin-bottom: 20px
+  color: $grey
+  font-family: 'LeagueGothicRegular'
+  font-size: 120px
+  +single-text-shadow(white, 3px, 3px)
+
+h2
+  margin:
+    bottom: 20px
+    left: 30px
+  color: $html5-color
+  font-family: 'DroidSansRegular'
+  font-size: 56px
+
+section
+  padding: 40px
+  background: white
+  &.horizontal
+    width: 40%
+  &.left
+    float: left
+  &.right
+    float: right
+  &.vertical
+    height: 40%
+
+a
+  color: $blue
+
+p
+  line-height: 42px
+
+em
+  color: $blue
+
+i
+  font-style: italic
+
+b
+  font-weight: bold
+
+u
+  text-decoration: underline
+
+ul, ol
+  padding-left: 25px
+  line-height: 32px
+  li
+    padding: 5px 0
+
+ul
+  list-style-type: disc
+
+pre, span.pre
+  font-family: monospace
+  font-size: 18px
+  background-color: #393939
+  color: white
+
+pre
+  padding: 40px
+  line-height: 24px
+
+table
+  width: 100%
+  th
+    font-weight: bold
+  td, th
+    padding: 5px 20px
+
+.slide-number
+  float: right
+  color: #CCC
+  font-size: 18px
+
+.inverted
+  background: $grey
+  color: white
+
+.spacious
+  padding: 30px
+
+.note
+  margin: 10px
+  font-style: italic
+  color: lighten($grey, 40%)
+
+.source
+  float: right
+  font-size: 16px
+
+.code-example
+  font-family: monospace
+  font-size: 18px
+
+.plus-list
+  list-style-image: url('../images/plus.png')
+  color: #45976F
+
+.minus-list
+  list-style-image: url('../images/minus.png')
+  color: #AA4646
+
+// Slide specific
+#html-example
+  width: 920px
+  padding: 40px
+  border: none
+  background-color: #393939
+  color: white
+  @extend .code-example
+
+#timeline
+  width: 100%
+  td
+    text-align: center
+
+#timeline-specs
+  font-weight: bold
+
+#timeline-bar
+  height: 2px
+  background: $blue
+  .fight
+    background: lighten($blue, 40%)
+
+#timeline-numbers
+  font-size: 14px
+
+#w3c-whatwg
+  width: 100%
+  .caption td
+    font-size: 30px
+    color: lighten($blue, 30%)
+  .description td
+    vertical-align: middle
+    font-size: 14px
+  .year
+    font-weight: bold
+
+#requirements
+  td
+    @extend .spacious
+    text-align: center
+  td:not(:last-child)
+    border-right: 10px solid white
+
+#output
+  height: 325px
+  overflow: hidden
+  padding: 0
+  font-style: italic
+  li
+    float: left
+    padding: 20px
+    margin:
+      right: 10px
+      bottom: 10px
+    background: white
+    &:before
+      content: "„"
+    &:after
+      content: "“"
+
+
+// Presentation
+#presentation
+  vertical-align: top
+  white-space: nowrap
+
+div.slide
+  position: relative
+  display: inline-block
+  width: 1000px
+  height: 700px
+  padding: 40px 20px
+  vertical-align: top
+
+div.inactiveslide
+  +opacity(0.4)
+
+div.activeslide
